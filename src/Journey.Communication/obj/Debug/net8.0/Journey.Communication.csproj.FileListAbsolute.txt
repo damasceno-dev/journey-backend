@@ -1,0 +1,11 @@
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Communication/bin/Debug/net8.0/Journey.Communication.deps.json
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Communication/bin/Debug/net8.0/Journey.Communication.dll
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Communication/bin/Debug/net8.0/Journey.Communication.pdb
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Communication/obj/Debug/net8.0/Journey.Communication.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Communication/obj/Debug/net8.0/Journey.Communication.AssemblyInfoInputs.cache
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Communication/obj/Debug/net8.0/Journey.Communication.AssemblyInfo.cs
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Communication/obj/Debug/net8.0/Journey.Communication.csproj.CoreCompileInputs.cache
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Communication/obj/Debug/net8.0/Journey.Communication.dll
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Communication/obj/Debug/net8.0/refint/Journey.Communication.dll
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Communication/obj/Debug/net8.0/Journey.Communication.pdb
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Communication/obj/Debug/net8.0/ref/Journey.Communication.dll
