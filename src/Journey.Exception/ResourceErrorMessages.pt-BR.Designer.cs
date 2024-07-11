@@ -62,5 +62,11 @@ namespace Journey.Exception {
                 return ResourceManager.GetString("NAME_EMPTY", resourceCulture);
             }
         }
+        
+        internal static string TRIP_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("TRIP_NOT_FOUND", resourceCulture);
+            }
+        }
     }
 }

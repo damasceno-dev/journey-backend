@@ -27,4 +27,7 @@
     <data name="END_DATE_TRIP_MUST_BE_LATER_THAN_START_DATE" xml:space="preserve">
         <value>End date cannot be before start date</value>
     </data>
+    <data name="TRIP_NOT_FOUND" xml:space="preserve">
+        <value>Trip not found</value>
+    </data>
 </root>
