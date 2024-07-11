@@ -9,6 +9,11 @@
       "Journey.Exception/1.0.0": {
         "runtime": {
           "Journey.Exception.dll": {}
+        },
+        "resources": {
+          "pt-BR/Journey.Exception.resources.dll": {
+            "locale": "pt-BR"
+          }
         }
       }
     }

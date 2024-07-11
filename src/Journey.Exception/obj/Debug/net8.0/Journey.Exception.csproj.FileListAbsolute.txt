@@ -1,10 +1,17 @@
 /Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/bin/Debug/net8.0/Journey.Exception.deps.json
 /Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/bin/Debug/net8.0/Journey.Exception.dll
 /Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/bin/Debug/net8.0/Journey.Exception.pdb
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/bin/Debug/net8.0/pt-BR/Journey.Exception.resources.dll
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/Journey.Exception.ResourceErrorMessages.resources
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/Journey.Exception.ResourceErrorMessages.pt-BR.resources
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/Journey.Exception.csproj.GenerateResource.cache
 /Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/Journey.Exception.GeneratedMSBuildEditorConfig.editorconfig
 /Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/Journey.Exception.AssemblyInfoInputs.cache
 /Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/Journey.Exception.AssemblyInfo.cs
 /Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/Journey.Exception.csproj.CoreCompileInputs.cache
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/Journey.Exception.sourcelink.json
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/pt-BR/Journey.Exception.resources.cs
+/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/pt-BR/Journey.Exception.resources.dll
 /Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/Journey.Exception.dll
 /Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/refint/Journey.Exception.dll
 /Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Exception/obj/Debug/net8.0/Journey.Exception.pdb
