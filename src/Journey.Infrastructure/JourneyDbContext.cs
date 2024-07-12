@@ -10,7 +10,12 @@ public class JourneyDbContext: DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("Host=localhost;Database=journey;Username=postgres;Password=reallyStrongPwd123");
+        var isLocalDocker = Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_LOCAL_CONTAINER") == "true";
+        var dbHost = isLocalDocker ? "host.docker.internal" : "localhost";
+        var connectionString =
+            $"Host={dbHost};Database=journey;Username=postgres;Password=reallyStrongPwd123";
+        Console.WriteLine(connectionString);
+        optionsBuilder.UseNpgsql(connectionString);
     }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
