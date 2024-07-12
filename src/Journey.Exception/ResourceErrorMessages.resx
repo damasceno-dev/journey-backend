@@ -33,4 +33,7 @@
     <data name="UNKNOWN_ERROR" xml:space="preserve">
         <value>Unknown error</value>
     </data>
+    <data name="DATE_NOT_WITHIN_TRAVEL_PERIOD" xml:space="preserve">
+        <value>The date you selected for the activity is not within the travel period</value>
+    </data>
 </root>
