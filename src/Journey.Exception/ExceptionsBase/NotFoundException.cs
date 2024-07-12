@@ -13,4 +13,12 @@ public class NotFoundException : JourneyException
     {
         return HttpStatusCode.NotFound;
     }
+
+    public override IList<string> GetErrorMessages()
+    {
+        return new List<string>()
+        {
+            Message
+        };
+    }
 }

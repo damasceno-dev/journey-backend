@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "QNvy+1LJi5Z+NS+9Em/pG1RZKMBqxxyIO7uT7LR2O42wV7pi8JCZetqQOBjcp7RZ8jwJ3hGCEdVXSB07RUHYbw==",
+  "dgSpecHash": "GMpbsjlloQEklZ66OGVuOJS3m5lskfR7nkfZ2PZJtdwQ6HxeagXufTg0ZdnxpQbvCKhz3bEnRaG3d3C2YLJgnA==",
   "success": true,
   "projectFilePath": "/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/tests/Validators.Test/Validators.Test.csproj",
   "expectedPackageFiles": [
     "/Users/fernandodamasceno/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
+    "/Users/fernandodamasceno/.nuget/packages/fluentvalidation/11.9.2/fluentvalidation.11.9.2.nupkg.sha512",
     "/Users/fernandodamasceno/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/fernandodamasceno/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/fernandodamasceno/.nuget/packages/humanizer.core.af/2.14.1/humanizer.core.af.2.14.1.nupkg.sha512",
