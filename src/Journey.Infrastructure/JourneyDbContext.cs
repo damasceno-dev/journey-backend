@@ -12,4 +12,18 @@ public class JourneyDbContext: DbContext
     {
         optionsBuilder.UseNpgsql("Host=localhost;Database=journey;Username=postgres;Password=reallyStrongPwd123");
     }
+    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<Activity>().Property(p => p.Date).HasConversion(
+            v => v.ToUniversalTime(),
+            v => DateTime.SpecifyKind(v, DateTimeKind.Utc)); 
+        modelBuilder.Entity<Trip>().Property(p => p.StartDate).HasConversion(
+            v => v.ToUniversalTime(),
+            v => DateTime.SpecifyKind(v, DateTimeKind.Utc));        
+        modelBuilder.Entity<Trip>().Property(p => p.EndDate).HasConversion(
+            v => v.ToUniversalTime(),
+            v => DateTime.SpecifyKind(v, DateTimeKind.Utc));
+    }
 }
