@@ -21,7 +21,7 @@ jobs:
         echo "sha=$SHA" >> $GITHUB_OUTPUT
     
     - name: Build docker image
-      run: docker build -t damasc84/journey.api:{{ steps.generate_sha.outputs.sha }} -f src/Journey.Api/Dockerfile .
+      run: docker build -t damasc84/journey.api:${{ steps.generate_sha.outputs.sha }} -f src/Journey.Api/Dockerfile .
 
 
         
