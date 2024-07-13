@@ -26,12 +26,20 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     
-    - name: Build docker image
-      run: docker build -t damasc84/journey.api:${{ steps.generate_sha.outputs.sha }} -f src/Journey.Api/Dockerfile .
-
-    - name: Push image to container registry
-      run: |
-        docker push damasc84/journey.api:${{ steps.generate_sha.outputs.sha }}
-        docker tag damasc84/journey.api:${{ steps.generate_sha.outputs.sha }} damasc84/journey.api:latest
-        docker push damasc84/journey.api:latest
-        
+#    - name: Build docker image
+#      run: docker build -t damasc84/journey.api:${{ steps.generate_sha.outputs.sha }} -f src/Journey.Api/Dockerfile .
+#
+#    - name: Push image to container registry
+#      run: |
+#        docker push damasc84/journey.api:${{ steps.generate_sha.outputs.sha }}
+#        docker tag damasc84/journey.api:${{ steps.generate_sha.outputs.sha }} damasc84/journey.api:latest
+#        docker push damasc84/journey.api:latest
+    
+    - name: Build and push
+      uses: 'docker/build-push-action@v6'
+      with:
+        context: .
+        push: true
+        tags: |
+          damasc84/journey.api:${{ steps.generate_sha.outputs.sha }}
+          damasc84/journey.api:latest
