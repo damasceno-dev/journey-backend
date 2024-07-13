@@ -1,6 +1,5 @@
 using Journey.Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
-
 namespace Journey.Infrastructure;
 
 public class JourneyDbContext: DbContext

@@ -28,7 +28,8 @@ public class ExceptionFilter : IExceptionFilter
             };
             var responseJson = new ResponseErrorsJson(list);
             
-            context.Result = new ObjectResult(ResourceErrorMessages.UNKNOWN_ERROR);
+            // context.Result = new ObjectResult(ResourceErrorMessages.UNKNOWN_ERROR);
+            context.Result = new ObjectResult(context.Exception.Message);
         }
     }
 }
