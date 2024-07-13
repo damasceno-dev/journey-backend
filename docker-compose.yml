@@ -1,0 +1,28 @@
+﻿services:
+  api:
+    container_name: api
+    image: journey.api
+    build:
+      context: .
+      dockerfile: src/Journey.Api/Dockerfile
+    ports:
+      - 8080:8080
+    networks:
+      - journey
+  
+  db: 
+    image: postgres:latest
+    container_name: db
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: reallyStrongPwd123
+      POSTGRES_DB: journey
+    networks:
+      - journey
+
+networks:
+  journey:
+    driver: bridge
+    
