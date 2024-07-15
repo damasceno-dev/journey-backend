@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "98OTig5QlnnuNFcvyzBdD+afXuyYB2nagr3QONUpekGE5B9jgTpuwbAi6lmVxfaRcVmvL2noImpVoN5frGn+DQ==",
+  "dgSpecHash": "lMqyYW3PZ9hnmMyNIendam/VEwZXFDGr5QQq/r+GISZ36oVX+/EAm7SMe+Op1e+poU7v91xhxm+8CBmVpaRBxw==",
   "success": true,
   "projectFilePath": "/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Api/Journey.Api.csproj",
   "expectedPackageFiles": [
+    "/Users/fernandodamasceno/.nuget/packages/dotenv.net/3.2.0/dotenv.net.3.2.0.nupkg.sha512",
     "/Users/fernandodamasceno/.nuget/packages/fluentvalidation/11.9.2/fluentvalidation.11.9.2.nupkg.sha512",
     "/Users/fernandodamasceno/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/fernandodamasceno/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

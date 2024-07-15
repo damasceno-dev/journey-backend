@@ -1,4 +1,11 @@
+using dotenv.net;
 using Journey.Api.Filters;
+
+
+
+string root = Directory.GetParent(Directory.GetCurrentDirectory()).FullName;
+string envPath = Path.Combine(root, ".env");
+DotEnv.Load(new DotEnvOptions(envFilePaths: new[] { envPath }));
 
 var builder = WebApplication.CreateBuilder(args);
 

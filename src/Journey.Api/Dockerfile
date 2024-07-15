@@ -24,6 +24,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-# Set environment variable to indicate the application is running in a Docker container
-ENV DOTNET_RUNNING_IN_LOCAL_CONTAINER=true
 ENTRYPOINT ["dotnet", "Journey.Api.dll"]
