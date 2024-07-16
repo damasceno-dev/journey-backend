@@ -19,6 +19,14 @@ spec:
       containers:
         - name: api-journey
           image: damasc84/journey.api:0391483
+          env:
+          - name: DB_HOST
+            valueFrom:
+              secretKeyRef:
+                name: db-connection
+                key: db_host
+          ports:
+            - containerPort: 8080
           resources:
             requests:
               cpu: 500m
