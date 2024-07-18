@@ -1,10 +1,7 @@
 variable "prefix" {}
-variable "vpc_cidr_block" {}
-variable "cluster_name" {}
-variable "retention_days" {}
-variable "desired_size" {}
-variable "max_size" {}
-variable "min_size" {}
+variable "vpc_id" {}
+variable "subnet_ids" {}
+variable "eks_sg_id" {}
 variable "db_name" {}
 variable "db_username" {}
 variable "db_password" {}
@@ -13,4 +10,7 @@ variable "instance_class" {
 }
 variable "allocated_storage" {
   default = 20
+}
+variable "engine_version" {
+  default = "16.3"
 }

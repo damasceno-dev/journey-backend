@@ -5,48 +5,11 @@ terraform {
       version = "5.40.0"
     }
   }
-  # backend "s3" {
-  #   bucket  = "nlw-tfstate"
-  #   key     = "state/terraform.tfstate"
-  #   region  = "us-east-2"
-  #   encrypt = true
-  # }
 }
 
 provider "aws" {
   region = "us-east-1"
 }
-
-# resource "aws_s3_bucket" "terraform_state" {
-#   bucket        = "nlw-tfstate"
-#   force_destroy = true
-
-#   lifecycle {
-#     prevent_destroy = true
-#   }
-
-#   tags = {
-#     Iac = "True"
-#   }
-# }
-
-# resource "aws_s3_bucket_versioning" "terraform_state" {
-#   bucket = "nlw-tfstate"
-
-#   versioning_configuration {
-#     status = "Enabled"
-#   }
-# }
-
-# resource "aws_s3_bucket_server_side_encryption_configuration" "terraform_state" {
-#   bucket = "nlw-tfstate"
-
-#   rule {
-#     apply_server_side_encryption_by_default {
-#       sse_algorithm = "AES256"
-#     }
-#   }
-# }
 
 module "vpc" {
   source         = "./modules/vpc"
@@ -64,4 +27,17 @@ module "eks" {
   desired_size   = var.desired_size
   max_size       = var.max_size
   min_size       = var.min_size
+}
+
+module "rds" {
+  source       = "./modules/rds"
+  prefix       = var.prefix
+  vpc_id       = module.vpc.vpc_id
+  subnet_ids   = module.vpc.subnet_ids
+  eks_sg_id    = module.eks.sg_id
+  db_name      = var.db_name
+  db_username  = var.db_username
+  db_password  = var.db_password
+  instance_class = var.instance_class
+  allocated_storage = var.allocated_storage
 }
