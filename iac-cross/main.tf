@@ -30,14 +30,17 @@ module "eks" {
 }
 
 module "rds" {
-  source       = "./modules/rds"
-  prefix       = var.prefix
-  vpc_id       = module.vpc.vpc_id
-  subnet_ids   = module.vpc.subnet_ids
-  eks_sg_id    = module.eks.sg_id
-  db_name      = var.db_name
-  db_username  = var.db_username
-  db_password  = var.db_password
-  instance_class = var.instance_class
+  source          = "./modules/rds"
+  prefix          = var.prefix
+  cluster_name   = var.cluster_name
+  vpc_id          = module.vpc.vpc_id
+  subnet_ids      = module.vpc.subnet_ids
+  eks_sg_id       = module.eks.eks_sg_id
+  rds_sg_id       = module.rds.rds_sg_id
+  db_name         = var.db_name
+  db_username     = var.db_username
+  db_password     = var.db_password
+  instance_class  = var.instance_class
   allocated_storage = var.allocated_storage
+  home_ip         = var.home_ip
 }
