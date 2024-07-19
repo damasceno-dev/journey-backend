@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  api:
+    build:
+      context: "/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey"
+      dockerfile: "src/Journey.Api/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Journey.Api.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "journey.api:dev"
+    ports: []
+    volumes:
+    - "/Users/fernandodamasceno/.nuget/packages:/root/.nuget/packages"
+    - "/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey/src/Journey.Api:/app:rw"
+    - "/Users/fernandodamasceno/Coding/CursosRocketSeat/nlw16Journey/TrilhaCSharp/Journey:/src:rw"
+    working_dir: "/app"
