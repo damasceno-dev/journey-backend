@@ -1,4 +1,2 @@
 /src/obs.txt
 .env
-k8s/secret.yaml
-/k8s-helm/templates/secret.yaml
