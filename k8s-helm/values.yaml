@@ -2,7 +2,7 @@ replicaCount: 5
 image:
   repository: damasc84/journey.api
   pullPolicy: IfNotPresent
-  tag: ab8700c
+  tag: 69a114f
   containerPort: 8080
 imagePullSecrets: []
 nameOverride: ''
