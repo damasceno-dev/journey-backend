@@ -51,7 +51,7 @@ jobs:
         branch: release
         targetBranch: main
         createPR: true
-        valueFile: 'deploy/values.yaml'
+        valueFile: 'k8s-helm/values.yaml'
         propertyPath: 'image.tag'
         value: ${{ steps.generate_sha.outputs.sha }}
         commitChange: true
