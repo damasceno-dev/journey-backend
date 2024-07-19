@@ -1,11 +1,9 @@
 data "aws_security_group" "eks_cluster_sg_auto_generated" {
   filter {
     name   = "group-name"
-    values = ["${var.cluster_name}-cluster-sg-${var.prefix}-*"]
+    values = ["eks-cluster-sg-${var.prefix}-${var.cluster_name}-*"]
   }
 }
-
-
 
 resource "aws_security_group" "rds_sg" {
   vpc_id = var.vpc_id
