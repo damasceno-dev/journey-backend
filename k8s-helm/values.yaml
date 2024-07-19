@@ -8,7 +8,7 @@ image:
   repository: damasc84/journey.api
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "a5dd453"
+  tag: "9f35ee9"
   containerPort: 8080
 
 imagePullSecrets: []
