@@ -86,5 +86,17 @@ namespace Journey.Exception {
                 return ResourceManager.GetString("ACTIVITY_NOT_FOUND", resourceCulture);
             }
         }
+        
+        internal static string EMAIL_EMPTY {
+            get {
+                return ResourceManager.GetString("EMAIL_EMPTY", resourceCulture);
+            }
+        }
+        
+        internal static string PARTICIPANT_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("PARTICIPANT_NOT_FOUND", resourceCulture);
+            }
+        }
     }
 }

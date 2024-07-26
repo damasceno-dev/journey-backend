@@ -12,7 +12,7 @@ public class GetTripByIdUseCase
     public ResponseTripJson Execute(Guid id)
     {
         var dbContext = new JourneyDbContext();
-        var trip = dbContext.Trips.Include(t => t.Activities).FirstOrDefault(t => t.Id == id);
+        var trip = dbContext.Trips.Include(t => t.Activities).Include(t=> t.Participants).FirstOrDefault(t => t.Id == id);
         
         if (trip is null)
         {
@@ -28,6 +28,10 @@ public class GetTripByIdUseCase
             Activities = trip.Activities.Select(a => new ResponseActivityJson
             {
                 Id = a.Id, Name = a.Name, Date = a.Date, Status = (Communication.Enums.ActivityStatus)a.Status
+            }).ToList(),
+            Participants = trip.Participants.Select(p => new ResponseParticipantJson
+            {
+                Id = p.Id, Name = p.Name, Email = p.Email, IsConfirmed = (ConfirmedStatus)p.IsConfirmed
             }).ToList()
         };
     }

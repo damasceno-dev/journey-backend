@@ -39,4 +39,10 @@
     <data name="ACTIVITY_NOT_FOUND" xml:space="preserve">
         <value>Activity not found</value>
     </data>
+    <data name="EMAIL_EMPTY" xml:space="preserve">
+        <value>Email cannot be null or empty</value>
+    </data>
+    <data name="PARTICIPANT_NOT_FOUND" xml:space="preserve">
+        <value>Participant not found</value>
+    </data>
 </root>

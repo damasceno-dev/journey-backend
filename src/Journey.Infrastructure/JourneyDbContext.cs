@@ -6,6 +6,7 @@ public class JourneyDbContext: DbContext
 {
     public DbSet<Trip> Trips { get; set; }
     public DbSet<Activity> Activities { get; set; }
+    public DbSet<Participant> Participants { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
