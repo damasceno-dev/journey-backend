@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 16.3
+-- Dumped from database version 16.3 (Debian 16.3-1.pgdg120+1)
 -- Dumped by pg_dump version 16.3 (Homebrew)
 
 SET statement_timeout = 0;
@@ -20,7 +20,7 @@ SET row_security = off;
 -- Name: journey; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE journey WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'en_US.UTF-8';
+CREATE DATABASE journey WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'en_US.utf8';
 
 
 ALTER DATABASE journey OWNER TO postgres;
@@ -37,6 +37,22 @@ SET check_function_bodies = false;
 SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
+
+--
+-- Name: public; Type: SCHEMA; Schema: -; Owner: pg_database_owner
+--
+
+CREATE SCHEMA public;
+
+
+ALTER SCHEMA public OWNER TO pg_database_owner;
+
+--
+-- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: pg_database_owner
+--
+
+COMMENT ON SCHEMA public IS 'standard public schema';
+
 
 SET default_tablespace = '';
 
@@ -56,6 +72,21 @@ CREATE TABLE public."Activities" (
 
 
 ALTER TABLE public."Activities" OWNER TO postgres;
+
+--
+-- Name: Participants; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public."Participants" (
+    "Id" uuid NOT NULL,
+    "Name" text,
+    "Email" text,
+    "IsConfirmed" integer,
+    "TripId" uuid
+);
+
+
+ALTER TABLE public."Participants" OWNER TO postgres;
 
 --
 -- Name: Trips; Type: TABLE; Schema: public; Owner: postgres
@@ -103,10 +134,16 @@ f2e1c9d3-9f1a-4d4b-9b8c-3f2d1e9c4f7b	Visita à Robben Island	2024-12-08 12:00:00
 f53cb0c4-5e9f-4f30-9a76-0348c328dbf8	Visita a Montmartre	2024-07-08 11:00:00	0	3fa85f64-5717-4562-b3fc-2c963f66afa6
 f73d5a15-3a5c-493e-a1b3-5b8f9457e2e7	Visita ao Pão de Açúcar	2024-09-10 10:00:00	0	b1d5c254-97e4-4b7a-b5f7-bfd7fdf4ea6a
 f89b34a1-0a14-4f52-a9f1-3f0c4e3347d7	Visita ao Monte Fuji	2024-08-24 13:00:00	0	7b9c61ae-3ef8-48b1-94a8-896e5fb90895
-dbbcf2d2-c0e3-49f5-b5ef-1061fd7f75da	ACTIVITY from local to aws rds	2024-07-16 00:42:12.692	0	02a01dbc-b008-41e8-a281-3a92570da2f2
-70a3f27b-10d8-4ca9-8b6c-78f21da9eba1	Visitar loja da Nintendo	2024-08-16 00:44:17.476	0	7b9c61ae-3ef8-48b1-94a8-896e5fb90895
-1b620f43-7552-4a97-9ade-4cab5b0991f2	Cafézinho perto da Eiffel	2024-07-09 03:03:49.342	0	3fa85f64-5717-4562-b3fc-2c963f66afa6
-076ccab3-14e7-4ae9-8d31-cc5457d631c3	Box com Cangurus	2024-11-06 03:06:21.821	1	a7bb7c50-0f04-4af6-9635-48c6b539e2e7
+\.
+
+
+--
+-- Data for Name: Participants; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public."Participants" ("Id", "Name", "Email", "IsConfirmed", "TripId") FROM stdin;
+88366140-0acd-4417-b0b4-561b8b0e2822	fernando	fern@damasco.com	0	3fa85f64-5717-4562-b3fc-2c963f66afa6
+4021491c-168f-48ba-8f9e-5324d46e22de	olice	olice@gmail.com	1	3fa85f64-5717-4562-b3fc-2c963f66afa6
 \.
 
 
@@ -122,8 +159,6 @@ b1d5c254-97e4-4b7a-b5f7-bfd7fdf4ea6a	Viagem ao Brasil	2024-09-05 00:00:00	2024-0
 d5f1b3e9-bfb7-4d7f-a6a8-c5d3bde920ec	Viagem à África do Sul	2024-12-01 00:00:00	2024-12-10 23:59:59
 e6d9b9f3-b15e-4a36-bb65-69e3d3fd76e4	Viagem à Itália	2025-01-15 00:00:00	2025-01-25 23:59:59
 fb3fc2e7-c714-4e2a-98e1-8f40cb24d3b2	Viagem ao Canadá	2024-10-10 00:00:00	2024-10-20 23:59:59
-02a01dbc-b008-41e8-a281-3a92570da2f2	New trip from local to aws	2024-07-15 20:47:25.997	2024-08-15 20:47:25.997
-7394423a-be5e-45c5-9f82-dd8cf01949d9	New trip from k8s LOCAL	2024-07-16 00:17:27.65	2024-08-16 00:17:27.65
 \.
 
 
@@ -133,6 +168,14 @@ fb3fc2e7-c714-4e2a-98e1-8f40cb24d3b2	Viagem ao Canadá	2024-10-10 00:00:00	2024-
 
 ALTER TABLE ONLY public."Activities"
     ADD CONSTRAINT activities_pk PRIMARY KEY ("Id");
+
+
+--
+-- Name: Participants participants_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."Participants"
+    ADD CONSTRAINT participants_pk PRIMARY KEY ("Id");
 
 
 --
@@ -149,6 +192,14 @@ ALTER TABLE ONLY public."Trips"
 
 ALTER TABLE ONLY public."Activities"
     ADD CONSTRAINT activities_trips_id_fk FOREIGN KEY ("TripId") REFERENCES public."Trips"("Id");
+
+
+--
+-- Name: Participants participants_trips_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."Participants"
+    ADD CONSTRAINT participants_trips_id_fk FOREIGN KEY ("TripId") REFERENCES public."Trips"("Id");
 
 
 --
