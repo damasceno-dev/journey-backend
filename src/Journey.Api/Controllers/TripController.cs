@@ -8,6 +8,7 @@ using Journey.Application.UseCases.Trips.Delete;
 using Journey.Application.UseCases.Trips.GetAll;
 using Journey.Application.UseCases.Trips.GetById;
 using Journey.Application.UseCases.Trips.Register;
+using Journey.Application.UseCases.Trips.Update;
 using Journey.Communication.Requests;
 using Journey.Communication.Responses;
 using Microsoft.AspNetCore.Mvc;
@@ -46,6 +47,16 @@ namespace Journey.Api.Controllers
         {
                 var useCase = new GetTripByIdUseCase();
                 var response = useCase.Execute(id);
+                return Ok(response);
+        }
+        [HttpPut]
+        [Route("{id}/update")]
+        [ProducesResponseType(typeof(ResponseShortTripJson), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status400BadRequest)]
+        public IActionResult UpdateById([FromRoute]Guid id, [FromBody]RequestRegisterTripJson request)
+        {
+                var useCase = new UpdateTripByIdUseCase();
+                var response = useCase.Execute(id, request);
                 return Ok(response);
         }
         
