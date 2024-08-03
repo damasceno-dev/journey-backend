@@ -3,7 +3,6 @@ using Journey.Application.UseCases.Activities.Delete;
 using Journey.Application.UseCases.Activities.Register;
 using Journey.Communication.Requests;
 using Journey.Communication.Responses;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Journey.Api.Controllers

@@ -3,7 +3,6 @@ using Journey.Application.UseCases.Participants.Delete;
 using Journey.Application.UseCases.Participants.Register;
 using Journey.Communication.Requests;
 using Journey.Communication.Responses;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Journey.Api.Controllers
@@ -12,8 +11,6 @@ namespace Journey.Api.Controllers
     [ApiController]
     public class TripParticipantsController : ControllerBase
     {
-        
-        //Participant routes
         [HttpPost]
         [Route("{tripId}/register")]
         [ProducesResponseType(typeof(ResponseParticipantJson), StatusCodes.Status201Created)]

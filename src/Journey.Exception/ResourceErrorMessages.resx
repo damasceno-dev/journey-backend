@@ -45,4 +45,10 @@
     <data name="PARTICIPANT_NOT_FOUND" xml:space="preserve">
         <value>Participant not found</value>
     </data>
+    <data name="URL_EMPTY" xml:space="preserve">
+        <value>Url cannot be null or empty</value>
+    </data>
+    <data name="LINK_NOT_FOUND" xml:space="preserve">
+        <value>Link not found</value>
+    </data>
 </root>

@@ -7,4 +7,5 @@ public class ResponseTripJson
     public DateTime EndDate { get; set; }
     public IList<ResponseActivityJson> Activities { get; set; } = [];
     public IList<ResponseParticipantJson> Participants { get; set; } = [];
+    public IList<ResponseLinkJson> Links { get; set; } = [];
 }

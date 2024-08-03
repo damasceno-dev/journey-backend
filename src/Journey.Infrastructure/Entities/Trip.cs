@@ -7,4 +7,5 @@ public class Trip
     public DateTime EndDate { get; set; }
     public IList<Activity> Activities { get; set; } = [];
     public IList<Participant> Participants { get; set; } = [];
+    public IList<Link> Links { get; set; } = [];
 }

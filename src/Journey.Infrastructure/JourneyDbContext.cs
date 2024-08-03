@@ -7,7 +7,7 @@ public class JourneyDbContext: DbContext
     public DbSet<Trip> Trips { get; set; }
     public DbSet<Activity> Activities { get; set; }
     public DbSet<Participant> Participants { get; set; }
-
+    public DbSet<Link> Links { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         var dbHost = Environment.GetEnvironmentVariable("DB_HOST");

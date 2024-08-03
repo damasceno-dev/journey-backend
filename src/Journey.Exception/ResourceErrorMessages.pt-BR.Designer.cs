@@ -98,5 +98,17 @@ namespace Journey.Exception {
                 return ResourceManager.GetString("PARTICIPANT_NOT_FOUND", resourceCulture);
             }
         }
+        
+        internal static string URL_EMPTY {
+            get {
+                return ResourceManager.GetString("URL_EMPTY", resourceCulture);
+            }
+        }
+        
+        internal static string LINK_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("LINK_NOT_FOUND", resourceCulture);
+            }
+        }
     }
 }
